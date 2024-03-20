@@ -72,4 +72,4 @@ contours = plt.contour(X, Y, data_smoothed, colors='black', linewidths=0.5)
 #plt.title('Heat Map with Contours')
 
 #plt.colorbar()
-st.pyplot()
+st.pyplot(fig)
