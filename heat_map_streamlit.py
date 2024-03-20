@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from numpy import convolve
+from scipy.ndimage import gaussian_filter
 import streamlit as st
 
 # 18×20の座標を作成する
