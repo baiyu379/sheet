@@ -67,9 +67,9 @@ contours = plt.contour(X, Y, data_smoothed, colors='black', linewidths=0.5)
 plt.xticks(np.arange(0, len(x), 10), np.arange(1, len(x) + 1, 10))
 plt.yticks(np.arange(0, len(y), 10), np.arange(1, len(y) + 1, 10))
 
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.title('Heat Map with Contours')
+#plt.xlabel('X')
+#plt.ylabel('Y')
+#plt.title('Heat Map with Contours')
 
-plt.colorbar()
+#plt.colorbar()
 st.pyplot()
