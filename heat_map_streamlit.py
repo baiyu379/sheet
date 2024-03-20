@@ -68,6 +68,11 @@ ax.set_xticklabels(np.arange(1, len(x) + 1, 10))
 ax.set_yticks(np.arange(0, len(y), 10))
 ax.set_yticklabels(np.arange(1, len(y) + 1, 10))
 
+# 軸ラベルを削除
+ax.set_xlabel('')
+ax.set_ylabel('')
+ax.set_xticks([])
+ax.set_yticks([])
 #ax.set_xlabel('X')
 #ax.set_ylabel('Y')
 #ax.set_title('Heat Map with Contours')
