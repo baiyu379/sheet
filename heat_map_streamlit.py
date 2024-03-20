@@ -58,7 +58,7 @@ data_smoothed = gaussian_filter(data, sigma=14)
 
 # ヒートマップを描画する
 st.pyplot(plt.figure(figsize=(10, 8)))
-plt.imshow(data_smoothed, cmap='hot', interpolation='nearest')
+plt.imshow(data_smoothed, cmap='hot_r', interpolation='nearest')
 
 # 等高線を追加
 contours = plt.contour(X, Y, data_smoothed, colors='black', linewidths=0.5)
