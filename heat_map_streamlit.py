@@ -56,20 +56,21 @@ data = coeff_data1 * data1 + coeff_data2 * data2 + data3 + data4 + data5 + data6
 # データを平滑化
 data_smoothed = gaussian_filter(data, sigma=14)
 
-# ヒートマップを描画する
-st.pyplot(plt.figure(figsize=(10, 8)))
-plt.imshow(data_smoothed, cmap='hot_r', interpolation='nearest')
+fig, ax = plt.subplots(figsize=(10, 8))
+ax.imshow(data_smoothed, cmap='hot_r', interpolation='nearest')  # 'hot_r'はhotカラーマップの逆
 
 # 等高線を追加
-contours = plt.contour(X, Y, data_smoothed, colors='black', linewidths=0.5)
+contours = ax.contour(X, Y, data_smoothed, colors='black', linewidths=0.5)
 
 # x軸とy軸の設定
-#plt.xticks(np.arange(0, len(x), 10), np.arange(1, len(x) + 1, 10))
-#plt.yticks(np.arange(0, len(y), 10), np.arange(1, len(y) + 1, 10))
+ax.set_xticks(np.arange(0, len(x), 10))
+ax.set_xticklabels(np.arange(1, len(x) + 1, 10))
+ax.set_yticks(np.arange(0, len(y), 10))
+ax.set_yticklabels(np.arange(1, len(y) + 1, 10))
 
-#plt.xlabel('X')
-#plt.ylabel('Y')
-#plt.title('Heat Map with Contours')
+#ax.set_xlabel('X')
+#ax.set_ylabel('Y')
+#ax.set_title('Heat Map with Contours')
 
-#plt.colorbar()
+#plt.colorbar(ax=ax)
 st.pyplot(fig)
